@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "incrementalcore:block/primitive_workbench"
+    }
+  }
+}

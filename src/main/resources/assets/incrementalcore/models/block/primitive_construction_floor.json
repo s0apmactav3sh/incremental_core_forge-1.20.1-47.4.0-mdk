@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "incrementalcore:block/primitive_construction_floor"
+  }
+}
