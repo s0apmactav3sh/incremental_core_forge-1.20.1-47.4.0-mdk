@@ -112,12 +112,12 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven {
-        name = 'GTCEu Maven'
-        url = 'https://maven.gtceu.com'
-        content {
-            includeGroup 'com.gregtechceu.gtceu' }
-    }
+    maven { url = "https://maven.minecraftforge.net/" }
+    maven { url = "https://maven.gtceu.com" }         // GTCEu
+    maven { url = "https://maven.tterrag.com" }       // Mixin Extras
+    maven { url = "https://maven.architectury.dev/" }
+    maven { url = "https://api.modrinth.com/maven" }
+    mavenCentral()
 }
 
 dependencies {
@@ -127,8 +127,13 @@ dependencies {
     // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     //gtceu
-    implementation fg.deobf("com.gregtechceu.gtceu:gtceu:1.6.4")
+    compileOnly files("libs.gtceu-1.20.1-1.6.4.jar")
+    runtimeOnly files(".libs/gtceu-1.20.1-1.6.4.jar")
 
+    //Mixin
+
+
+    //basic MC
     minecraft "net.minecraftforge:forge:1.20.1-47.4.0"
 }
 
