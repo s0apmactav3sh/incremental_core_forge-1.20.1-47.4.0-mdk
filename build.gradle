@@ -127,7 +127,7 @@ dependencies {
     // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     //gtceu
-    compileOnly files("libs.gtceu-1.20.1-1.6.4.jar")
+    compileOnly("libs.gtceu-1.20.1-1.6.4.jar")
     runtimeOnly files(".libs/gtceu-1.20.1-1.6.4.jar")
 
     //Mixin
