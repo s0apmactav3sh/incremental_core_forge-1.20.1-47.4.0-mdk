@@ -1,0 +1,10 @@
+{
+  "item.gtceu.flint_bolt": "Flint Bolt",
+  "item.gtceu.wooden_wheel": "Wooden Wheel",
+  "item.gtceu.grout": "Grout",
+
+  "block.gtceu.primitive_construction_floor": "Primitive Construction Floor",
+  "block.gtceu.primitive_workbench": "Primitive Workbench",
+
+  "creativetab.gtceu.primitive_construction_floor": "Primitive Construction Floor"
+}

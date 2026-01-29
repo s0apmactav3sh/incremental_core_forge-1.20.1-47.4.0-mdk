@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gtceu:primitive_construction_floor",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            },
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "tag": "minecraft:mineable/pickaxe"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

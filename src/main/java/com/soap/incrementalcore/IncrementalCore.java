@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.soap.incrementalcore.block.ModBlocks;
 import com.soap.incrementalcore.item.ModCreativeModeTabs;
 import com.soap.incrementalcore.item.ModItems;
+import com.soap.incrementalcore.prestige.run.RunEnder;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +35,8 @@ public class IncrementalCore
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        MinecraftForge.EVENT_BUS.register(RunEnder.class); //needed for forge to find subscribe-event inside RUnEnder class
+
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
@@ -52,7 +55,9 @@ public class IncrementalCore
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.STONE_ROD);
+            event.accept(ModItems.FLINT_BOLT);
+            event.accept(ModItems.WOODEN_WHEEL);
+            event.accept(ModItems.GROUT);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {

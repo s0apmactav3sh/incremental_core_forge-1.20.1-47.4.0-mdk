@@ -1,5 +1,6 @@
 package com.soap.incrementalcore.item;
 
+import com.gregtechceu.gtceu.GTCEu;
 import com.soap.incrementalcore.IncrementalCore;
 import com.soap.incrementalcore.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
@@ -12,23 +13,23 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS=
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, IncrementalCore.MOD_ID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GTCEu.MOD_ID);
 
     //Create custom items creative tab
-    public static final RegistryObject<CreativeModeTab> STONE_ROD_ITEMS_TAB = CREATIVE_MODE_TABS.register("stone_rod_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STONE_ROD.get()))
-                    .title(Component.translatable("creativetab.incrementalcore.stone_rod"))
+    public static final RegistryObject<CreativeModeTab> MILESTONE_CRAFTS_TAB = CREATIVE_MODE_TABS.register("milestone_crafts_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.WOODEN_WHEEL.get()))
+                    .title(Component.translatable("creativetab.gtceu.wooden_wheel"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.STONE_ROD.get());
+                        output.accept(ModItems.WOODEN_WHEEL.get());
                     }).build());
 
     //Create custom blocks creative tab
-    public static final RegistryObject<CreativeModeTab> PRIMITIVE_CONSTRUCTION_FLOOR_TAB = CREATIVE_MODE_TABS.register("primitive_construction_floor_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.PRIMITIVE_CONSTRUCTION_FLOOR.get()))
-                    .withTabsBefore(STONE_ROD_ITEMS_TAB.getId())
-                    .title(Component.translatable("creativetab.incrementalcore.primitive_construction_floor"))
+    public static final RegistryObject<CreativeModeTab> MILESTONE_WORKBENCHES_TAB = CREATIVE_MODE_TABS.register("milestone_workbenches_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.PRIMITIVE_WORKBENCH.get()))
+                    .withTabsBefore(MILESTONE_CRAFTS_TAB.getId())
+                    .title(Component.translatable("creativetab.gtceu.primitive_workbench"))
                     .displayItems((blockDisplayParameters, output) -> {
-                        output.accept(ModBlocks.PRIMITIVE_CONSTRUCTION_FLOOR.get());
+                        output.accept(ModBlocks.PRIMITIVE_WORKBENCH.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

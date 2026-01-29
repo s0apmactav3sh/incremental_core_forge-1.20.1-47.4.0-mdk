@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["S"],
+  "key": {
+    "S": {
+      "tag": "gtceu:raw_crafting_stones"
+    }
+  },
+  "result": {
+    "item": "minecraft:stone", "count": 1
+  }
+}

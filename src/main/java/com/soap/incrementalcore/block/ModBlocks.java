@@ -1,5 +1,6 @@
 package com.soap.incrementalcore.block;
 
+import com.gregtechceu.gtceu.GTCEu;
 import com.soap.incrementalcore.IncrementalCore;
 import com.soap.incrementalcore.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -16,7 +17,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, IncrementalCore.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, GTCEu.MOD_ID);
 
     public static final RegistryObject<Block> PRIMITIVE_CONSTRUCTION_FLOOR = registerBlock("primitive_construction_floor",
             () -> new Block(BlockBehaviour.Properties.of()
