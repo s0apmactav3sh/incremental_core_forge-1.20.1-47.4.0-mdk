@@ -19,7 +19,21 @@ build
 
 # other
 eclipse
-run
+# Ignore the run folder and everything in it by default
+/run/*
+
+# Allow the kubejs directory specifically
+!/run/kubejs/
+
+# Inside kubejs, ignore everything (like logs and the probe folder)
+/run/kubejs/*
+
+# BUT allow these specific script and asset folders
+!/run/kubejs/server_scripts/
+!/run/kubejs/client_scripts/
+!/run/kubejs/startup_scripts/
+!/run/kubejs/assets/
+!/run/kubejs/config/
 
 # Files from Forge MDK
 forge*changelog.txt
