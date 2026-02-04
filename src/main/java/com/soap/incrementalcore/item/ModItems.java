@@ -15,6 +15,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> FLINT_BOLT = ITEMS.register("flint_bolt",
             () -> new ModItem(new Item.Properties()));
+    public static final RegistryObject<Item> FLINT_ROD = ITEMS.register("flint_rod",
+            () -> new ModItem(new Item.Properties()));
     public static final RegistryObject<Item> GROUT = ITEMS.register("grout",
             () -> new ModItem(new Item.Properties()));
     public static final RegistryObject<Item> WOODEN_WHEEL = ITEMS.register("wooden_wheel",

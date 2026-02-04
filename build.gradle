@@ -124,6 +124,26 @@ repositories {
     mavenLocal()
 
     maven {
+        url = "https://maven.architectury.dev/"
+    }
+
+    maven { //KubeJS
+        name = "LatvianModder"
+        url = "https://maven.latvian.dev/releases"
+        content {
+            includeGroup "dev.latvian.mods"
+            includeGroup "dev.latvian.apps"
+        }
+    }
+
+    maven {
+        url 'https://jitpack.io'
+        content {
+            includeGroup "com.github.rtyley"
+        }
+    }
+
+    maven {
         name = 'GTCEu Maven'
         url = 'https://maven.gtceu.com'
         content {
@@ -171,6 +191,12 @@ dependencies {
 
     // Mixin
     annotationProcessor('org.spongepowered:mixin:0.8.5:processor')
+
+    //KubeJS
+    implementation fg.deobf("dev.latvian.mods:rhino-forge:${rhino_version}")
+    implementation fg.deobf("dev.latvian.mods:kubejs-forge:${kubejs_version}")
+    implementation fg.deobf("dev.architectury:architectury-forge:${architectury_version}")
+    implementation fg.deobf("curse.maven:probejs-585406:5227399")
 
     // JEI, EMI, Jade
     // compile against the JEI API but do not include it at runtime

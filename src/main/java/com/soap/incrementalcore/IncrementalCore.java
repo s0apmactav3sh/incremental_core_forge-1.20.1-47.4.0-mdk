@@ -56,6 +56,7 @@ public class IncrementalCore
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.FLINT_BOLT);
+            event.accept(ModItems.FLINT_ROD);
             event.accept(ModItems.WOODEN_WHEEL);
             event.accept(ModItems.GROUT);
         }
