@@ -1,4 +1,4 @@
-package com.soap.incrementalcore.util;
+package com.soap.incrementalcore.registry;
 
 import com.soap.incrementalcore.IncrementalCore;
 import net.minecraft.resources.ResourceLocation;
@@ -12,7 +12,7 @@ public class ModTags {
     public static class Blocks {
 
         private static TagKey<Block> createTag(String name) {
-            return BlockTags.create(new ResourceLocation(IncrementalCore.MOD_ID, name));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(IncrementalCore.MOD_ID, name));
         }
     }
 
@@ -21,7 +21,7 @@ public class ModTags {
 
 
         private static TagKey<Item> createTag(String name) {
-            return ItemTags.create(new ResourceLocation(IncrementalCore.MOD_ID, name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(IncrementalCore.MOD_ID, name));
         }
     }
 }

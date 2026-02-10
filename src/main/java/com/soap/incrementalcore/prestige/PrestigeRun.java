@@ -64,7 +64,7 @@ public class PrestigeRun {
     }
 
     public boolean isRunning() {
-        return runState == runState.RUNNING;
+        return runState == RunState.RUNNING;
     }
 
     public long getTimeLeft() {

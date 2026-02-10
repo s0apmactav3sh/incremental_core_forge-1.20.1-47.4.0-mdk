@@ -1,8 +1,8 @@
-package com.soap.incrementalcore.block;
+package com.soap.incrementalcore.registry;
 
 import com.gregtechceu.gtceu.GTCEu;
-import com.soap.incrementalcore.IncrementalCore;
-import com.soap.incrementalcore.item.ModItems;
+import com.soap.incrementalcore.content.tier0.primitiveworkbench.PrimitiveWorkbenchBlock;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -21,12 +21,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PRIMITIVE_CONSTRUCTION_FLOOR = registerBlock("primitive_construction_floor",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     //Attempt to add primitive_workbench
     public static final RegistryObject<Block> PRIMITIVE_WORKBENCH = registerBlock("primitive_workbench",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(1f).sound(SoundType.WOOD)));
+            () -> new PrimitiveWorkbenchBlock(BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

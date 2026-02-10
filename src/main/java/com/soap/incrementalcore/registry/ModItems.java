@@ -1,8 +1,7 @@
-package com.soap.incrementalcore.item;
+package com.soap.incrementalcore.registry;
 
 import com.gregtechceu.gtceu.GTCEu;
-import com.soap.incrementalcore.IncrementalCore;
-import com.soap.incrementalcore.item.base.ModItem;
+import com.soap.incrementalcore.common.item.ModItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

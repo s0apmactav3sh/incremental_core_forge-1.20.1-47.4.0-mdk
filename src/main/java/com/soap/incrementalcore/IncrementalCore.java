@@ -1,10 +1,10 @@
 package com.soap.incrementalcore;
 
 import com.mojang.logging.LogUtils;
-import com.soap.incrementalcore.block.ModBlocks;
-import com.soap.incrementalcore.item.ModCreativeModeTabs;
-import com.soap.incrementalcore.item.ModItems;
+import com.soap.incrementalcore.client.tier0.primitiveworkbench.PrimitiveWorkbenchScreen;
+import com.soap.incrementalcore.registry.*;
 import com.soap.incrementalcore.prestige.run.RunEnder;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -41,6 +41,9 @@ public class IncrementalCore
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -78,6 +81,7 @@ public class IncrementalCore
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            MenuScreens.register(ModMenuTypes.PRIMITIVE_WORKBENCH_MENU.get(), PrimitiveWorkbenchScreen::new);
 
         }
     }

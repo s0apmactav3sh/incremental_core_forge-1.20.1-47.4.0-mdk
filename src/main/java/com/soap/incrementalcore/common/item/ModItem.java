@@ -1,4 +1,4 @@
-package com.soap.incrementalcore.item.base;
+package com.soap.incrementalcore.common.item;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -34,4 +34,3 @@ public class ModItem extends Item {
         }
     }
 }
-
